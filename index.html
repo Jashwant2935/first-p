@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jaswant portfolio</title>
+    <style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+#cont{
+    height: auto;
+    width: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+#button{
+    margin-bottom: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: aqua;
+    border-radius: 4px;
+
+}
+.input{
+    padding: 3px 10px;
+    margin-top: 8px;
+    }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div id="cont">
+    <h1 id="h1">Its me Jashwant</h1>
+    <h2 id="h2">Contact me through this form</h2>
+    <label for="mail" class="label">Enter your email id</label>
+    <input type="text" class="input" id="email">
+    <br>
+    <label for="number" class="label">Enter your phone number</label>
+    <input type="number" class="input" id="number">
+    <br>
+    <button id="button">submit</button>
+
+
+    <script>
+        let button = document.querySelector("#button");
+        
+        button.addEventListener('click',(e)=>{
+            let email = document.querySelector("#email");
+            let num = parseInt(document.querySelector("#number"));
+            let emailvalue= email.value;
+            let numvalue = num.value;
+            console.log(emailvalue);
+            email ='';
+            num ='';
+            alert(`i will contact you as soon as possible your email ${emailvalue} and your number ${numvalue}`)
+
+    })
+
+
+
+
+
+
+
+    </script>
+
+</div>
+</body>
+</html>
